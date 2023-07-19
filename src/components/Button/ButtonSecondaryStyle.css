@@ -1,0 +1,20 @@
+.button-secondary {
+  border-radius: 6px;
+border: 1.2px solid var(--orange-normal, #FC7201);
+display: inline-flex;
+padding: 12px 16px;
+justify-content: center;
+align-items: center;
+gap: 16px;
+}
+
+.button-normal:hover {
+  cursor: pointer;
+  
+}
+
+.button-normal:disabled {
+}
+
+.button-normal-text {
+}

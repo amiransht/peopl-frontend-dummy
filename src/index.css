@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lora:wght@400;500;700&display=swap');
+
+:root {
+  --neutral-100: #1D242D;
+  --neutral-90: #262F3A;
+  --neutral-80: #323E4D;
+  --neutral-70: #3F4E61;
+  --neutral-60: #435367;
+  --neutral-50: #4C5E74;
+  --neutral-40: #546881;
+  --neutral-40-2: #9CAABA;
+  --neutral-30: #CAD0D8;
+  --neutral-20: #E5E8EC;
+  --neutral-10: #EEF0F2;
+  --neutral-0: #FFFFFF;
+
+  --orange-light: #FFF1E6;
+  --orange-light-hover: #FFEAD9;
+  --orange-light-active: #FED3B0;
+  --orange-normal: #FC7201;
+  --orange-normal-hover: #E36701;
+  --orange-normal-active: #CA5B01;
+  --orange-dark: #BD5601;
+  --orange-dark-hover: #974401;
+  --orange-dark-active: #713300;
+  --orange-darker: #582800;
+
+  --violet-light: #F7EFFF;
+  --violet-light-hover: #F3E7FF;
+  --violet-light-active: #E6CEFF;
+  --violet-normal: #AE62FE;
+  --violet-normal-hover: #9D58E5;
+  --violet-normal-active: #8B4ECB;
+  --violet-dark: #834ABF;
+  --violet-dark-hover: #683B98;
+  --violet-dark-active: #4E2C72;
+  --violet-darker: #3D2259;
+
+
+}
+
+a {
+  text-decoration: none;
+}
+
+
+body {
+  margin: 0;
+  /* display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh; */
+}
+
+h1 {
+  color: var(--neutral-100);
+
+/* Header/H1 */
+font-family: Inter;
+font-size: 64px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+h2 {
+  color: var(--neutral-100);
+
+/* Header/H2 */
+font-family: Inter;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+h3 {
+  color: var(--neutral-100, #1D242D);
+
+/* Header/H3 */
+font-family: Inter;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+h4 {
+  color: var(--neutral-100, #1D242D);
+
+/* Header/H4 */
+font-family: Inter;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+h5 {
+  color: var(--neutral-100, #1D242D);
+
+/* Header/H5 */
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+h6 {
+  color: var(--neutral-100, #1D242D);
+
+/* Header/H6 */
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.body-p1 {
+  color: var(--neutral-100, #1D242D);
+
+/* Body/P1 */
+font-family: Inter;
+font-size: 64px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.body-p2 {
+  color: var(--neutral-100, #1D242D);
+
+/* Body/P2 */
+font-family: Inter;
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.body-p3 {
+  color: var(--neutral-100, #1D242D);
+
+/* Body/P3 */
+font-family: Inter;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.body-p4 {
+  color: var(--neutral-100, #1D242D);
+
+/* Body/P4 */
+font-family: Inter;
+font-size: 28px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.body-p5 {
+  color: var(--neutral-100, #1D242D);
+
+/* Body/P5 */
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.body-p6 {
+  color: var(--neutral-100, #1D242D);
+
+/* Body/P6 */
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+
+
+@media (prefers-color-scheme: light) {
+  /* :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  } */
+}
