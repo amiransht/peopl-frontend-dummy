@@ -4,6 +4,7 @@ import { color } from "framer-motion";
 
 interface LabelProps {
   labelText: string;
+  addLink?: string;
   isRequired: boolean;
   placeholderText: string;
   icon?: ReactElement;
@@ -13,6 +14,7 @@ interface LabelProps {
 
 const Label: React.FC<LabelProps> = ({
   labelText,
+  addLink,
   isRequired,
   placeholderText,
   icon,
@@ -24,7 +26,9 @@ const Label: React.FC<LabelProps> = ({
       <div className="label-text">
         <h6>{labelText}</h6>
         {isRequired === true && <h6 className="text-danger"> *</h6>}
+        {/* {addLink != null && <div className="text-orange-primary ">{addLink}</div>} */}
       </div>
+      
       <div className="input-container">
         <input
           type={

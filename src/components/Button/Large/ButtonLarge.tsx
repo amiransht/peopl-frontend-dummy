@@ -9,6 +9,7 @@ interface ButtonLargeProps {
 const ButtonLarge: React.FC<ButtonLargeProps> = ({ buttonText, onClick }) => {
   return (
     <div className={"button-large button-large-text"} onClick={onClick}>
+      
       {buttonText}
     </div>
   );
