@@ -11,7 +11,7 @@ const ButtonSecondary: React.FC<ButtonSecondaryProps> = ({
   onClick,
 }) => {
   return (
-    <div className={"button-secondary button-secondary-text"} onClick={onClick}>
+    <div className={"button-secondary"} onClick={onClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="20"
