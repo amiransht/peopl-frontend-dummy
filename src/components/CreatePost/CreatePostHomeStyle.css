@@ -5,6 +5,7 @@
   gap: 24px;
   border-radius: 8px;
   background: var(--neutral-0, #fff);
+  margin: 40px 0px;
 }
 
 .create-post-home-profile-button {
