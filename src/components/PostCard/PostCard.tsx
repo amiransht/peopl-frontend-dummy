@@ -1,9 +1,48 @@
 import React from "react";
 import "./PostCardStyle.css";
 
-const PostCard = () => {
-  const content =
-    "After tons of speculations of what will happen to Ash and Pikachu after Pokemon Journey's ended, it is finally confirmed by The Official Pokemon Youtube Channel that they have finally reached the final chapter of their journey and they'll be replaced by the new protagonists(Liko - {which has some of ash's traits and a hairpin that resembles the logo on ash's hat, do you think she is his daughter?} and Roy) in the upcoming series. I thought of the possibilities, but this is the one i never thought would actually happen, Ash and Pikachu actually leaving the Pokemon anime after 25 years, this is truly the end of an era. What are you thoughts and opinions about this news, and what is in store for the future of Pokemon anime?";
+interface PostCardProps {
+  title: string;
+  content: string;
+  author: string;
+  community: string;
+  createdAt: Date;
+}
+
+function getRelativeTime(createdAt: Date): string {
+  const now = new Date();
+  const diffInSeconds = Math.floor(
+    (now.getTime() - createdAt.getTime()) / 1000
+  );
+
+  const timeUnits: { [unit: string]: number } = {
+    year: 31536000,
+    month: 2592000,
+    week: 604800,
+    day: 86400,
+    hour: 3600,
+    minute: 60,
+  };
+
+  for (const unit in timeUnits) {
+    const seconds = timeUnits[unit as keyof typeof timeUnits];
+    const interval = Math.floor(diffInSeconds / seconds);
+
+    if (interval >= 1) {
+      return `${interval}${unit.charAt(0)}`;
+    }
+  }
+
+  return "now";
+}
+
+const PostCard: React.FC<PostCardProps> = ({
+  title,
+  content,
+  author,
+  community,
+  createdAt,
+}) => {
   return (
     <div className="post-card-container">
       <div className="post-card-header">
@@ -38,14 +77,14 @@ const PostCard = () => {
               fill="#FFF1E6"
             />
           </svg>
-          <div className="body-p6">pecintapikachu</div>
+          <div className="body-p6">{community}</div>
           <h6 style={{ color: "var(--neutral-402);" }}>·</h6>
           <div className="body-p8">Posted by</div>
-          <div className="body-p8"> pikachupika2424</div>
+          <div className="body-p8">{author}</div>
         </div>
-        <div className="body-p8">11:00 PM</div>
+        <div className="body-p8">{getRelativeTime(new Date(createdAt))}</div>
       </div>
-      <h4>Ash & Pikachu actually left the Pokemon anime</h4>
+      <h4>{title}</h4>
       <div className="body-p8 post-card-content" style={{ textAlign: "left" }}>
         {content}
       </div>
