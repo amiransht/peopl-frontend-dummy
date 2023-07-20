@@ -7,6 +7,7 @@ export interface Post {
   content: string;
   author: string;
   community: string;
+  totalComments: number;
   createdAt: Date;
 }
 

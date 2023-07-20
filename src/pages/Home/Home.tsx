@@ -35,6 +35,7 @@ const Home = () => {
             content={post.content}
             author={post.author}
             community={post.community}
+            totalComments={post.totalComments}
             createdAt={post.createdAt}
           />
         ))}

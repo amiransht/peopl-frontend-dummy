@@ -6,6 +6,7 @@ interface PostCardProps {
   content: string;
   author: string;
   community: string;
+  totalComments: number;
   createdAt: Date;
 }
 
@@ -41,6 +42,7 @@ const PostCard: React.FC<PostCardProps> = ({
   content,
   author,
   community,
+  totalComments,
   createdAt,
 }) => {
   return (
@@ -78,7 +80,7 @@ const PostCard: React.FC<PostCardProps> = ({
             />
           </svg>
           <div className="body-p6">{community}</div>
-          <h6 style={{ color: "var(--neutral-402);" }}>·</h6>
+          <h6 style={{ color: "#9caaba" }}>·</h6>
           <div className="body-p8">Posted by</div>
           <div className="body-p8">{author}</div>
         </div>
@@ -105,7 +107,7 @@ const PostCard: React.FC<PostCardProps> = ({
               stroke-linejoin="round"
             />
           </svg>
-          <div>12 Comments</div>
+          <div>{totalComments} Comments</div>
         </div>
       </div>
     </div>
