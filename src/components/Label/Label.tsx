@@ -1,20 +1,21 @@
-import React, { ChangeEvent, ReactElement } from "react";
+import React, { ChangeEvent, MouseEventHandler, ReactElement } from "react";
 import "./LabelStyle.css";
-import { color } from "framer-motion";
+import { Link, To, useNavigate } from "react-router-dom";
 
 interface LabelProps {
   labelText: string;
   addLink?: string;
+  handleAddLink?: MouseEventHandler<HTMLAnchorElement>;
   isRequired: boolean;
   placeholderText: string;
   icon?: ReactElement;
   value: string;
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }
-
 const Label: React.FC<LabelProps> = ({
   labelText,
   addLink,
+  handleAddLink,
   isRequired,
   placeholderText,
   icon,
@@ -23,18 +24,25 @@ const Label: React.FC<LabelProps> = ({
 }) => {
   return (
     <div className="label-container">
-      <div className="label-text">
-        <h6>{labelText}</h6>
-        {isRequired === true && <h6 className="text-danger"> *</h6>}
-        {/* {addLink != null && <div className="text-orange-primary ">{addLink}</div>} */}
+      <div className="label-text-field">
+        <div className="label-text">
+          <h6>{labelText}</h6>
+          {isRequired === true && <h6 className="text-danger"> *</h6>}
+        </div>
+        {addLink != null && (
+          <Link to={"./forgot"}>
+            <div className="text-orange-primary ">{addLink}</div>
+          </Link>
+        )}
       </div>
-      
+
       <div className="input-container">
         <input
           type={
-            labelText === "Password"
-              ? "password"
-              : labelText === "Confirm your Password"
+            labelText === "Password" ||
+            labelText === "Confirm your Password" ||
+            labelText === "Your New Password" ||
+            labelText === "Confirm Your New Password"
               ? "password"
               : "text"
           }
@@ -44,7 +52,6 @@ const Label: React.FC<LabelProps> = ({
           onChange={onChange}
         />
         {icon != null && <div className="icon-container">{icon}</div>}
-        
       </div>
     </div>
   );

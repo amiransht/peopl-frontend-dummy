@@ -90,6 +90,8 @@ export default function Register({}: Props) {
               ): void {
                 throw new Error("Function not implemented.");
               }}
+              isSecondary={false}
+              isGhost={false}
             ></ButtonLarge>
             <div className="or-container">
               <hr className="line" />

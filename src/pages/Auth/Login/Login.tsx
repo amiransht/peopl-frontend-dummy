@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent, MouseEventHandler, useState } from "react";
 import "./LoginStyle.css";
 import Label from "../../../components/Label/Label";
 
@@ -68,13 +68,12 @@ export default function Login({}: Props) {
               isRequired={false}
             ></Label>
             <ButtonLarge
-              buttonText={"Log In"}
-              onClick={function (
-                event: React.MouseEvent<HTMLDivElement, MouseEvent>
-              ): void {
-                throw new Error("Function not implemented.");
-              }}
-            />
+                          buttonText={"Log In"}
+                          onClick={function (
+                              event: React.MouseEvent<HTMLDivElement, MouseEvent>
+                          ): void {
+                              throw new Error("Function not implemented.");
+                          } } isSecondary={false} isGhost={false}            />
             <div className="or-container">
               <hr className="line" />
               <div className="body-p6 or">or</div>

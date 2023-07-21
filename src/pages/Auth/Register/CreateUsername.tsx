@@ -1,10 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import ButtonGhost from "../../../components/Button/ButtonGhost";
 import "./CreateUsernameStyle.css";
 import Label from "../../../components/Label/Label";
-import ButtonLargeSecondary from "../../../components/Button/Large/ButtonLargeSecondary";
 import ButtonLarge from "../../../components/Button/Large/ButtonLarge";
+import ButtonNormal from "../../../components/Button/Normal/ButtonNormal";
 
 type Props = {};
 
@@ -107,16 +106,14 @@ export default function CreateUsername({}: Props) {
     </svg>
   );
 
-  const handleRandomize = () => {
-
-  }
+  const handleRandomize = () => {};
   return (
     <>
       <div className="logo-app">Peopl.</div>
       <div className="auth-page">
         <div className="username-container">
           <div className="navigation">
-            <ButtonGhost
+            <ButtonNormal
               iconLeft={iconBack}
               buttonText={"Back to Register"}
               onClick={function (
@@ -124,7 +121,9 @@ export default function CreateUsername({}: Props) {
               ): void {
                 throw new Error("Function not implemented.");
               }}
-            ></ButtonGhost>
+              isSecondary={false}
+              isGhost={true}
+            ></ButtonNormal>
           </div>
           <div className="create-user-header">
             <h3>Create your Username</h3>
@@ -145,7 +144,7 @@ export default function CreateUsername({}: Props) {
                 throw new Error("Function not implemented.");
               }}
             />
-            <ButtonLargeSecondary
+            <ButtonLarge
               iconLeft={iconDice}
               buttonText={"Randomize"}
               onClick={function (
@@ -153,10 +152,16 @@ export default function CreateUsername({}: Props) {
               ): void {
                 throw new Error("Function not implemented.");
               }}
-            ></ButtonLargeSecondary>
-            
+              isSecondary={true}
+              isGhost={false}
+            ></ButtonLarge>
           </div>
-          <ButtonLarge buttonText={"Continue"} onClick={handleRandomize}></ButtonLarge>
+          <ButtonLarge
+            buttonText={"Continue"}
+            onClick={handleRandomize}
+            isSecondary={false}
+            isGhost={false}
+          ></ButtonLarge>
         </div>
       </div>
     </>

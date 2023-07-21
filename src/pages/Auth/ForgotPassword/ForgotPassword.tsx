@@ -1,14 +1,14 @@
 import React from "react";
 import "./ForgotPasswordStyle.css";
-import ButtonGhost from "../../../components/Button/ButtonGhost";
 import Label from "../../../components/Label/Label";
 import ButtonLarge from "../../../components/Button/Large/ButtonLarge";
 import { useNavigate } from "react-router-dom";
+import ButtonNormal from "../../../components/Button/Normal/ButtonNormal";
 
 type Props = {};
 
 export default function ForgotPassword({}: Props) {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const iconBack = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -31,13 +31,15 @@ export default function ForgotPassword({}: Props) {
       <div className="auth-page">
         <div className="forgot-container">
           <div className="navigation">
-            <ButtonGhost
+            <ButtonNormal
               iconLeft={iconBack}
               buttonText={"Back to Login"}
               onClick={() => {
-                navigate("../")
+                navigate("../");
               }}
-            ></ButtonGhost>
+              isSecondary={false}
+              isGhost={true}
+            ></ButtonNormal>
           </div>
           <div className="forgot-header">
             <h3>Reset Password</h3>
@@ -58,13 +60,15 @@ export default function ForgotPassword({}: Props) {
             }}
           />
           <ButtonLarge
-              buttonText={"Get Instruction"}
-              onClick={function (
-                event: React.MouseEvent<HTMLDivElement, MouseEvent>
-              ): void {
-                throw new Error("Function not implemented.");
-              }}
-            />
+            buttonText={"Get Instruction"}
+            onClick={function (
+              event: React.MouseEvent<HTMLDivElement, MouseEvent>
+            ): void {
+              throw new Error("Function not implemented.");
+            }}
+            isSecondary={false}
+            isGhost={false}
+          />
         </div>
       </div>
     </>

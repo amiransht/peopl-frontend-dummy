@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
-import "./ButtonLargeStyle.css";
+import "./ButtonNormalStyle.css";
 
-interface ButtonLargeProps {
+interface ButtonNormalProps {
   iconLeft?: ReactElement;
   buttonText: string;
   iconRight?: ReactElement;
@@ -10,7 +10,7 @@ interface ButtonLargeProps {
   onClick: (event: React.MouseEvent<HTMLDivElement>) => void;
 }
 
-const ButtonLarge: React.FC<ButtonLargeProps> = ({
+const ButtonNormal: React.FC<ButtonNormalProps> = ({
   iconLeft,
   iconRight,
   isGhost,
@@ -23,10 +23,10 @@ const ButtonLarge: React.FC<ButtonLargeProps> = ({
       <div
         className={
           isGhost === true
-            ? " button-large button-large-ghost-style" 
+            ? " button-normal button-normal-ghost-style"
             : isSecondary === true
-            ? " button-large button-large-secondary-style"
-            : " button-large button-large-style"
+            ? " button-normal button-normal-secondary-style"
+            : " button-normal button-normal-style"
         } onClick={onClick}
       >
         {iconLeft != null && iconLeft}
@@ -37,4 +37,4 @@ const ButtonLarge: React.FC<ButtonLargeProps> = ({
   );
 };
 
-export default ButtonLarge;
+export default ButtonNormal;

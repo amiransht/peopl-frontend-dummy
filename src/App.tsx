@@ -4,6 +4,8 @@ import Register from "./pages/Auth/Register/Register";
 import CreateUsername from "./pages/Auth/Register/CreateUsername";
 import Login from "./pages/Auth/Login/Login";
 import ForgotPassword from "./pages/Auth/ForgotPassword/ForgotPassword";
+import EmailSent from "./pages/Auth/ForgotPassword/EmailSent";
+import ResetPassword from "./pages/Auth/ForgotPassword/ResetPassword";
 
 
 
@@ -15,7 +17,10 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/register/create" element={<CreateUsername/>} />
           <Route path="/login" element={<Login />} />
-          <Route path="/login/reset" element={<ForgotPassword />} />
+          <Route path="/login/forgot" element={<ForgotPassword />} />
+          <Route path="/login/forgot/sent" element={<EmailSent />} />
+          <Route path="/reset" element={<ResetPassword />} />
+
           
         </Routes>
     </>
