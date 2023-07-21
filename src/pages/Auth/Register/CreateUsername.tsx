@@ -116,11 +116,7 @@ export default function CreateUsername({}: Props) {
             <ButtonNormal
               iconLeft={iconBack}
               buttonText={"Back to Register"}
-              onClick={function (
-                event: React.MouseEvent<HTMLDivElement, MouseEvent>
-              ): void {
-                throw new Error("Function not implemented.");
-              }}
+              onClick={() => {navigate("/register")}}
               isSecondary={false}
               isGhost={true}
             ></ButtonNormal>
