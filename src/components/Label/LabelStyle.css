@@ -48,6 +48,11 @@
   border: 0px solid var(--neutral-30, #eef0f2);
 }
 
+.label-input:focus {
+  outline-offset: 0px;
+  outline: none;
+}
+
 .icon-container {
   display: flex;
   padding: 0px 12px;
