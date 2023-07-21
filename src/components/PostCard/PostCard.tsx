@@ -79,20 +79,29 @@ const PostCard: React.FC<PostCardProps> = ({
               fill="#FFF1E6"
             />
           </svg>
-          <div className="body-p6">{community}</div>
-          <h6 style={{ color: "#9caaba" }}>·</h6>
-          <div className="body-p8">Posted by</div>
-          <div className="body-p8">{author}</div>
+          <div className="left-no-icon">
+            <div className="community-name body-p6">{community}</div>
+            <h6 className="dot" style={{ color: "#9caaba" }}>
+              ·
+            </h6>
+            <div className="posted-by">
+              <div className="user-name body-p8">Posted by</div>
+              <div className="user-name body-p8">{author}</div>
+            </div>
+          </div>
         </div>
-        <div className="body-p8">{getRelativeTime(new Date(createdAt))}</div>
+        <div className="user-name body-p8">
+          {getRelativeTime(new Date(createdAt))}
+        </div>
       </div>
-      <h4>{title}</h4>
+      <h4 className="title">{title}</h4>
       <div className="body-p8 post-card-content" style={{ textAlign: "left" }}>
         {content}
       </div>
       <div className="post-card-footer">
         <div className="post-card-reply">
           <svg
+            className="reply-icon"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="25"

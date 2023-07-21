@@ -24,6 +24,18 @@
   gap: 12px;
 }
 
+.post-card-header .left .left-no-icon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.post-card-header .left .posted-by {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .post-card-community-icon {
   display: flex;
   padding: 2.432px;
@@ -73,4 +85,76 @@
   left: 0;
   top: 0;
   background: linear-gradient(transparent 150px, #ffffff);
+}
+
+@media (max-width: 560px) {
+  .post-card-container {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .post-card-community-icon {
+    display: flex;
+    padding: 1.892px;
+    align-items: flex-start;
+    gap: 0.473px;
+    width: 24.216px;
+    height: 24.216px;
+  }
+
+  .post-card-header .left .left-no-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-start;
+  }
+
+  .post-card-header .left .posted-by {
+    gap: 4px;
+  }
+
+  .post-card-header .left .community-name {
+    color: var(--neutral-100, #1d242d);
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .post-card-header .left .dot {
+    display: none;
+  }
+
+  .post-card-header .left .user-name {
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .post-card-container .title {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .post-card-reply {
+    padding: 12px;
+    gap: 16px;
+
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.24px;
+  }
+
+  .post-card-reply .reply-icon {
+    width: 16px;
+    height: 16px;
+  }
 }
