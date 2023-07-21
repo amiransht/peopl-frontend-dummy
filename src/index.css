@@ -252,6 +252,11 @@ h6 {
 }
 
 @media (max-width: 768px) {
+  body {
+    margin: 48px;
+    margin-left: 48px;
+    margin-right: 48px;
+  }
   .logo-app {
     font-size: 21.153px;
     display: flex;
