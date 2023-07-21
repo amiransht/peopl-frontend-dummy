@@ -1,9 +1,10 @@
-import React from "react";
+import React, { ChangeEvent, useState } from "react";
 import "./RegisterStyle.css";
 import Label from "../../../components/Label/Label";
-import ButtonLarge from "../../../components/Button/ButtonLarge";
+
 import ButtonAuthGoogle from "../../../components/Button/AuthButton/ButtonAuthGoogle";
 import { useNavigate } from "react-router-dom";
+import ButtonLarge from "../../../components/Button/Large/ButtonLarge";
 
 type Props = {};
 
@@ -29,72 +30,90 @@ export default function Register({}: Props) {
       />
     </svg>
   );
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const newEmail = event.target.value;
+    setEmail(newEmail);
+  };
+
+  const handlePasswordChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const newPassword = event.target.value;
+    setPassword(newPassword);
+  };
+
+  const handleConfirmPasswordChange = (
+    event: ChangeEvent<HTMLInputElement>
+  ) => {
+    const newConfirmPassword = event.target.value;
+    setConfirmPassword(newConfirmPassword);
+  };
+
   return (
     <>
       <div className="logo-app">Peopl.</div>
       <div className="auth-page">
         <div className="regist-container">
-        <h3>Register</h3>
-        <div className="regist-form-container">
-          <Label
-            labelText={"Email"}
-            placeholderText={"youremail@domain.com"}
-            icon={undefined}
-            value={""}
-            onChange={function (
-              event: React.ChangeEvent<HTMLInputElement>
-            ): void {
-              throw new Error("Function not implemented.");
-            }}
-            isRequired={true}
-          ></Label>
-          <Label
-            labelText={"Password"}
-            placeholderText={""}
-            icon={iconPassword}
-            value={""}
-            onChange={function (
-              event: React.ChangeEvent<HTMLInputElement>
-            ): void {
-              throw new Error("Function not implemented.");
-            }}
-            isRequired={true}
-          ></Label>
-          <Label
-            labelText={"Confirm your Password"}
-            placeholderText={""}
-            icon={iconPassword}
-            value={""}
-            onChange={function (
-              event: React.ChangeEvent<HTMLInputElement>
-            ): void {
-              throw new Error("Function not implemented.");
-            }}
-            isRequired={true}
-          ></Label>
-          <ButtonLarge
-            buttonText={"Register"}
-            onClick={function (
-              event: React.MouseEvent<HTMLDivElement, MouseEvent>
-            ): void {
-              throw new Error("Function not implemented.");
-            }}
-          ></ButtonLarge>
-          <div className="or-container">
-            <hr className="line" />
-            <div className="body-p6 or">or</div>
-            <hr className="line" />
-          </div>
-          <ButtonAuthGoogle
-            onClick={() => {
-              navigate("/xxxx");
-            }}
-          />
-          <div className="login-frame">
+          <h3>Register</h3>
+          <div className="regist-form-container">
+            <Label
+              labelText={"Email"}
+              placeholderText={"youremail@domain.com"}
+              icon={undefined}
+              value={email}
+              onChange={handleEmailChange}
+              isRequired={true}
+            ></Label>
+            <Label
+              labelText={"Password"}
+              placeholderText={""}
+              icon={iconPassword}
+              value={password}
+              onChange={handlePasswordChange}
+              isRequired={true}
+            ></Label>
+            <Label
+              labelText={"Confirm your Password"}
+              placeholderText={""}
+              icon={iconPassword}
+              value={confirmPassword}
+              onChange={handleConfirmPasswordChange}
+              isRequired={true}
+            ></Label>
+            <ButtonLarge
+              buttonText={"Register"}
+              onClick={function (
+                event: React.MouseEvent<HTMLDivElement, MouseEvent>
+              ): void {
+                throw new Error("Function not implemented.");
+              }}
+              isSecondary={false}
+              isGhost={false}
+            ></ButtonLarge>
+            <div className="or-container">
+              <hr className="line" />
+              <div className="body-p6 or">or</div>
+              <hr className="line" />
+            </div>
+            <ButtonAuthGoogle
+              onClick={() => {
+                navigate("/xxxx");
+              }}
+            />
+            <div className="login-frame">
               <div className="body-p6">Already have an account?</div>
-              <div className="body-p6 login-text">Log In</div>
+              <a
+                onClick={() => {
+                  navigate("/login");
+                }}
+              >
+                <div className="body-p6 login-text">Log In</div>
+              </a>
             </div>
-            </div>
+          </div>
         </div>
       </div>
     </>

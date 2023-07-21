@@ -208,6 +208,17 @@ h6 {
   line-height: normal;
 }
 
+.body-p7 {
+  color: var(--neutral-100, #1d242d);
+
+  /* Body/P7 */
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
 .body-p8 {
   color: var(--neutral-402, #9caaba);
   text-align: center;

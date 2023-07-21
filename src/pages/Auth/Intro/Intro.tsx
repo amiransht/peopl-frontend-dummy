@@ -1,6 +1,4 @@
-import React from "react";
 import "./IntroStyle.css";
-import logo from "../../../assets/Google__G__Logo 1.png";
 import { useNavigate } from "react-router-dom";
 import ButtonAuthGoogle from "../../../components/Button/AuthButton/ButtonAuthGoogle";
 import ButtonAuth from "../../../components/Button/AuthButton/ButtonAuth";
@@ -31,7 +29,9 @@ export default function Intro({}: Props) {
     
             <div className="login-frame">
               <div className="body-p6">Already have an account?</div>
-              <div className="body-p6 login-text">Log In</div>
+              <a onClick={() => {
+                navigate("/login");
+              }}><div className="body-p6 login-text">Log In</div></a>
             </div>
           </div>
           <div className="intro-footer">
