@@ -50,3 +50,28 @@
 
   cursor: pointer;
 }
+
+.create-post-home-mobile {
+  display: none;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+
+  border-radius: 100px;
+  background: var(--orange-normal, #fc7201);
+}
+
+@media (max-width: 560px) {
+  .create-post-home-container {
+    display: none;
+  }
+
+  .create-post-home-mobile {
+    display: flex;
+  }
+}
